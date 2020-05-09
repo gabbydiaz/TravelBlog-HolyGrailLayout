@@ -18,6 +18,10 @@ html {
       max-width: 100%;
   }
 
+  p {
+      line-height: 2;
+  }
+
   body {
       font-family: var(--mainFont);
       font-size: 1.2rem;
@@ -77,6 +81,70 @@ html {
     font-size: 1.4rem;
 }
 
+/*-------- Main content styling -------*/
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.sidebar,
+.main-content {
+    flex: 0 0 100%;
+}
 
-  
+@media (min-width: 768px) {
+    .main-content {
+        flex: 0 0 70%;
+    }
+
+    .sidebar {
+        flex: 0 0 30%;
+        order: -1;
+    }
+}
+
+.main-content {
+    padding: 1.5rem;
+}
+
+/*-------- Sidebar styling ------------*/
+.sidebar {
+    background-color: var(--gray);
+    padding: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+.sidebar a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: var(--secondary);
+}
+
+/*-------- Footer styling -------*/
+.site-footer {
+    background-color: var(--secondary);
+
+}
+
+.site-footer p {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 700;
+    color: var(--white);
+}
